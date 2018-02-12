@@ -25,8 +25,7 @@ public class LatihanDatabaseModelDataApplicationTests extends TestCase{
         @Test
         public void TestKelurahanProvinsi(){
             List<Kecamatan> listKecamatan = wilayahservice.getAllKecamatan();
-            System.out.println("jumalh Kecamatan "+listKecamatan.size());
-//            assertEquals(2, listKecamatan.size());
+            assertEquals(2, listKecamatan.size());
 //            List<Kelurahan> listKelurahan = wilayahservice.getAllKelurahan();
 //            assertEquals(3, listKelurahan.size());
 //            

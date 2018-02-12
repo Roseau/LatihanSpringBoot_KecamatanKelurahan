@@ -15,6 +15,6 @@ import org.springframework.data.repository.CrudRepository;
  * @author St0rm
  */
 public interface KecamatanRepository extends CrudRepository<Kecamatan, Long> {
-    public List<Kecamatan> findAll();
+    List<Kecamatan> findAll();
     Kecamatan findByNama(String nama);
 }
