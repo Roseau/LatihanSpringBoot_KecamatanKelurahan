@@ -38,4 +38,12 @@ public class WilayahService {
     public Kecamatan getKecamatanByName(String nama){
         return this.kecamatanrepo.findByNama(nama);
     }
+    
+    public void saveKecamatan(Kecamatan k){
+        this.kecamatanrepo.save(k);
+    }
+    
+    public void saveKelurahan(Kelurahan kh){
+        this.kelurahanrepo.save(kh);
+    }
 }

@@ -3,6 +3,9 @@ package ikhwan.khairul.latihan.LatihanDatabaseModelData;
 import ikhwan.khairul.latihan.LatihanDatabaseModelData.entity.Kecamatan;
 import ikhwan.khairul.latihan.LatihanDatabaseModelData.entity.Kelurahan;
 import ikhwan.khairul.latihan.LatihanDatabaseModelData.service.WilayahService;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import junit.framework.TestCase;
 import org.junit.Test;
@@ -26,12 +29,25 @@ public class LatihanDatabaseModelDataApplicationTests extends TestCase{
         public void TestKelurahanProvinsi(){
             List<Kecamatan> listKecamatan = wilayahservice.getAllKecamatan();
             assertEquals(2, listKecamatan.size());
-//            List<Kelurahan> listKelurahan = wilayahservice.getAllKelurahan();
-//            assertEquals(3, listKelurahan.size());
-//            
-//            Kecamatan Andir = wilayahservice.getKecamatanByName("Andir");
-//            assertNotNull(Andir);
-//            assertEquals(2, Andir.getListKelurahan().size());
+            List<Kelurahan> listKelurahan = wilayahservice.getAllKelurahan();
+            assertEquals(3, listKelurahan.size());
+            
+            Kecamatan Andir = wilayahservice.getKecamatanByName("Andir");
+            assertNotNull(Andir);
+            assertEquals(2, Andir.getListKelurahan().size());
+        }
+        @Test
+        public void addKelurahanPropinsi(){
+//            Kecamatan Arcamanik = new Kecamatan();
+//            Arcamanik.setNama("Arcamanik");
+//            Arcamanik.setCreatedDate(Timestamp.valueOf(LocalDateTime.now()));
+//            Arcamanik.setListKelurahan(new ArrayList<>());
+//            wilayahservice.saveKecamatan(Arcamanik);
+//              Kelurahan Garuda = new Kelurahan();
+//              Garuda.setNama("Garuda");
+//              Garuda.setKodepos("40184");
+//              Garuda.setCreatedDate(Timestamp.valueOf(LocalDateTime.now()));
+//              wilayahservice.saveKelurahan(Garuda);
         }
 
 }
