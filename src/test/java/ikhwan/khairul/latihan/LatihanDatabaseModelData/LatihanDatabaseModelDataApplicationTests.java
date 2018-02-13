@@ -28,9 +28,9 @@ public class LatihanDatabaseModelDataApplicationTests extends TestCase{
         @Test
         public void TestKelurahanProvinsi(){
             List<Kecamatan> listKecamatan = wilayahservice.getAllKecamatan();
-            assertEquals(2, listKecamatan.size());
+            assertEquals(3, listKecamatan.size());
             List<Kelurahan> listKelurahan = wilayahservice.getAllKelurahan();
-            assertEquals(3, listKelurahan.size());
+            assertEquals(4, listKelurahan.size());
             
             Kecamatan Andir = wilayahservice.getKecamatanByName("Andir");
             assertNotNull(Andir);
@@ -47,6 +47,10 @@ public class LatihanDatabaseModelDataApplicationTests extends TestCase{
 //              Garuda.setKodepos("40184");
 //              Garuda.setCreatedDate(Timestamp.valueOf(LocalDateTime.now()));
 //              wilayahservice.saveKelurahan(Garuda);
+           Kecamatan Andir = wilayahservice.getKecamatanByName("Andir");
+           assertNotNull(Andir);
+           Kelurahan Garuda = wilayahservice.getKelurahanByName("Garuda");
+            assertNotNull(Garuda);
         }
 
 }

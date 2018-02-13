@@ -16,4 +16,5 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface KelurahanRepository extends CrudRepository<Kelurahan, Long> {
     List<Kelurahan> findAll();
+    Kelurahan findByNama(String nama);
 }
