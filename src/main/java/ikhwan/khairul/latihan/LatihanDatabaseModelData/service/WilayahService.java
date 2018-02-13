@@ -50,4 +50,8 @@ public class WilayahService {
     public void saveKelurahan(Kelurahan kh){
         this.kelurahanrepo.save(kh);
     }
+    
+    public void addKelurahan(int idkel, int idkec){
+        this.kecamatanrepo.addKelurahan(idkel, idkec);
+    }
 }

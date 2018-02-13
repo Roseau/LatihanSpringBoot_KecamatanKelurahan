@@ -34,7 +34,7 @@ public class LatihanDatabaseModelDataApplicationTests extends TestCase{
             
             Kecamatan Andir = wilayahservice.getKecamatanByName("Andir");
             assertNotNull(Andir);
-            assertEquals(2, Andir.getListKelurahan().size());
+            assertEquals(4, Andir.getListKelurahan().size());
         }
         @Test
         public void addKelurahanPropinsi(){
@@ -42,15 +42,19 @@ public class LatihanDatabaseModelDataApplicationTests extends TestCase{
 //            Arcamanik.setNama("Arcamanik");
 //            Arcamanik.setCreatedDate(Timestamp.valueOf(LocalDateTime.now()));
 //            wilayahservice.saveKecamatan(Arcamanik);
-//              Kelurahan Garuda = new Kelurahan();
-//              Garuda.setNama("Garuda");
-//              Garuda.setKodepos("40184");
-//              Garuda.setCreatedDate(Timestamp.valueOf(LocalDateTime.now()));
-//              wilayahservice.saveKelurahan(Garuda);
-           Kecamatan Andir = wilayahservice.getKecamatanByName("Andir");
-           assertNotNull(Andir);
-           Kelurahan Garuda = wilayahservice.getKelurahanByName("Garuda");
-            assertNotNull(Garuda);
+//            Kelurahan Garuda = new Kelurahan();
+//            Garuda.setNama("Garuda");
+//            Garuda.setKodepos("40184");
+//            Garuda.setCreatedDate(Timestamp.valueOf(LocalDateTime.now()));
+//            wilayahservice.saveKelurahan(Garuda);
+//              Kecamatan Andir = wilayahservice.getKecamatanByName("Andir");
+//              assertNotNull(Andir);
+//              assertEquals(1, Andir.getId());
+//              Kelurahan Garuda = wilayahservice.getKelurahanByName("Garuda");
+//              assertNotNull(Garuda);
+//              assertEquals(4, Garuda.getId());
+//              Andir.getListKelurahan().add(Garuda);
+//              wilayahservice.saveKecamatan(Andir);
         }
 
 }

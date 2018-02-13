@@ -8,7 +8,10 @@ package ikhwan.khairul.latihan.LatihanDatabaseModelData.repository;
 import ikhwan.khairul.latihan.LatihanDatabaseModelData.entity.Kecamatan;
 import java.io.Serializable;
 import java.util.List;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -17,4 +20,8 @@ import org.springframework.data.repository.CrudRepository;
 public interface KecamatanRepository extends CrudRepository<Kecamatan, Long> {
     List<Kecamatan> findAll();
     Kecamatan findByNama(String nama);
+    
+    @Transactional
+    @Query(value = "insert into wilayah.list_kelurahan(id_kelurahan, id_kecamatan) values (?1,?2)", nativeQuery = true)
+    public void addKelurahan(int idkel, int idkec);
 }
