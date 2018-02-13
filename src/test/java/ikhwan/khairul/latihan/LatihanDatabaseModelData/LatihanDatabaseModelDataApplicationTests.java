@@ -41,7 +41,6 @@ public class LatihanDatabaseModelDataApplicationTests extends TestCase{
 //            Kecamatan Arcamanik = new Kecamatan();
 //            Arcamanik.setNama("Arcamanik");
 //            Arcamanik.setCreatedDate(Timestamp.valueOf(LocalDateTime.now()));
-//            Arcamanik.setListKelurahan(new ArrayList<>());
 //            wilayahservice.saveKecamatan(Arcamanik);
 //              Kelurahan Garuda = new Kelurahan();
 //              Garuda.setNama("Garuda");
